@@ -84,7 +84,7 @@ class MenuPrincipalFragment : Fragment(), WebResponseDelegate {
                 parametros.put("force-plp", true)
                 parametros.put("search-string", textBuscar)
                 parametros.put("page-number", "1")
-                parametros.put("number-of-items-per-page", "10")
+                parametros.put("number-of-items-per-page", "50")
                 endpoint.parametros = parametros
 
                 view?.imBuscar?.imageTintMode = null
