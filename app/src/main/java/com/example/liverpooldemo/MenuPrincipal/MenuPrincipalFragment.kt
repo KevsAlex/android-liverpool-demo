@@ -46,16 +46,7 @@ class MenuPrincipalFragment : Fragment(), WebResponseDelegate {
         var view = inflater.inflate(R.layout.fragment_menu_principal, container, false)
 
         webService = LiverpoolService(activity)
-        var endpoint = LiverpoolService.Endpoint.SearchProducto
-        val parametros = HashMap<String, Any>()
-        parametros.put("force-plp", true)
-        parametros.put("search-string", "")
-        parametros.put("page-number", "1")
-        parametros.put("number-of-items-per-page", "20")
-        endpoint.parametros = parametros
 
-
-        webService.performRequest(endpoint, null, MenuPrincipalFragment::class.java)
         webService.delegate = this
         dialogLoader = DialogLoader()
         dialogLoader?.isCancelable = false
@@ -73,7 +64,7 @@ class MenuPrincipalFragment : Fragment(), WebResponseDelegate {
             2f
         );
 
-        view?.editSearch?.addTextChangedListener (watcher())
+        view?.editSearch?.addTextChangedListener(watcher())
         view?.imBuscar?.setOnClickListener {
             view?.editSearch.setText("")
         }
