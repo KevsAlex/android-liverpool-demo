@@ -8,4 +8,4 @@ android-liverpool-demo
 - Problemas con el encoding (usualmente usaría retrofit , pero por alguna razón terminé usando String request de volley y tuve problemas con los acentos )
 - Autocompletar con el campo suggestedSearchTerm del servicio
 - Agregar localidad (no estaba en el servicio web)
-
+- Agregar paginado del servicio 
